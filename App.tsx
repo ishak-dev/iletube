@@ -1,20 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { LogBox, StyleSheet, Text, View } from 'react-native';
+import Home from './src/views/pages/Homepage/home';
+import ViewIndex from './src/views';
+
 
 export default function App() {
+  LogBox.ignoreAllLogs();
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      
+      <ViewIndex />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex:1,
+    paddingVertical: 50,
+    paddingHorizontal: 30,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    
   },
 });
+
+
+/* type VideoModel = {
+  name: string,
+  videos: Array<VideoObjectModel>,
+}
+
+type VideoObjectModel = {
+  description: string,
+}
+
+function getVideos(): VideoModel {
+    
+} */
